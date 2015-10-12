@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -88,4 +87,6 @@ gem "pdfkit", "= 0.6.2"
 gem 'font-awesome-sass'
 
 gem 'kaminari'
+
+gem "iconv", "~> 1.0.3"
 
