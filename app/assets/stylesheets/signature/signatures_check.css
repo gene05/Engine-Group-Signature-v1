@@ -1,0 +1,180 @@
+#body-group-signature
+#show-document-signed
+.show-signature
+.sigWrapper {
+  position: relative;
+}
+
+#body-group-signature
+#show-document-signed
+.show-signature
+.sigWrapper,
+#body-group-signature
+#show-document-signed
+.show-signature
+.sigWrapper .typed {
+  cursor: default;
+}
+
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-body
+.table-column-1,
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-1 {
+  width: 5%;
+}
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-body
+.table-column-2,
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-2 {
+  width: 60%;
+}
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-body
+.table-column-3,
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-3,
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-body
+.table-column-4,
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-4 {
+  width: 15%;
+  text-align: left;
+}
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-3,
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-4 {
+  color: #393939;
+}
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-body
+.table-column-5 {
+  width: 5%;
+  text-align: center;
+}
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-header
+.table-column-5 {
+  width: 5%;
+  color: #eee;
+}
+
+#body-group-signature
+.signature-check-container#trips-container
+.document-table
+.table-body
+.table-column-6 {
+  border-left: none;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-row
+.checked-false {
+  color: #BF4545 !important;
+}
+
+#body-group-signature
+.signature-container
+#show-document-signed
+.show-signature
+.sigPad {
+  margin: 0 auto;
+}
+
+#body-group-signature
+.signature-container
+#show-document-signed
+.show-signature
+.sigPad 
+.sigWrapper{
+  border: 0;
+}
+
+#body-group-signature
+.signature-container
+#show-document-signed
+.show-signature
+.sigPad canvas{
+  cursor: auto;
+}
+
+#body-group-signature
+.signature-container
+#show-document-signed
+#btn-back {
+color: inherit;
+text-decoration: inherit;
+width: 7em;
+margin-top: 2em;
+margin-bottom: 3em;
+display: table;
+float: right;
+margin-right: 45px;
+}
+
+#body-group-signature
+.signature-container
+#show-document-signed a{
+color: inherit;
+text-decoration: inherit;
+}
+
+#body-group-signature
+.signature-container
+#show-document-signed {
+  display: inline-block;
+  width: 100%;
+}
+
+#body-group-signature
+.signature-container
+.show-image-signature img{
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+

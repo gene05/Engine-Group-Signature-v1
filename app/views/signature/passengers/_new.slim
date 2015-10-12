@@ -1,0 +1,13 @@
+.table-row.signature-section-form-passengers.hidden
+  .table-column.table-column-1
+    .field.field-new-passenger
+      label class="label-passenger label-passenger-title" Name
+      = text_field_tag :name, nil, class: "input-passenger input-passenger-title input-new-title", :required => true
+  .table-column.table-column-2
+    .field.field-new-passenger
+      label class="label-passenger label-passenger-title" Email
+      = email_field_tag 'email', nil, class: 'input-passenger input-passenger-title input-new-title', :required => true
+  .table-column.table-column-3
+    a href="#" title="Save Passenger" class="submit btn btn-default btn-add-a-passenger" data-action="#{action}" id="btn-add-passenger" Save
+  .table-column.table-column-4
+    div class="submit btn btn-default passenger-b-close" data-action="#{action}" id="btn-cancel" Cancel

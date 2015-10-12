@@ -1,0 +1,44 @@
+.signature-header
+  = render "signature/shares/header_admin"
+
+.signature-container.signature-trips#trips-container
+  .document-title
+    .title Trips
+    .section-right
+      a href="#" class="submit btn btn-default btn-list-add" id="btn-list-add-trip" title="Add Trip" + Add Trip
+  .content-display-message
+    - if notice
+      .display-message.message-up#signature-success=notice
+  .document-table
+    .table-header
+      .table-row
+        .table-column.table-column-1
+          | Name of Trips
+          = sortable("name")
+        .table-column.table-column-2
+          | Status
+        .table-column.table-column-3
+          | .
+    .table-body
+      - @trips.each do |trip|
+        .table-row
+          .table-column.table-column-1= trip.name
+          div class="table-column table-column-2 checked-#{trip.signed_all_documents?}"= trip.documents_to_sign
+          div class="table-column table-column-3 table-column-icon set-edit-trip" data-id="#{trip.id}"
+            a href="#" class = "signature-icon signature-icon-span trip-#{trip.id}" id="btn-list-edit-trip" data-id="#{trip.id}"
+              span class="glyphicon glyphicon-pencil icon"
+          .table-column.table-column-4.table-column-icon
+            = link_to passengers_path(trip.id), :class => "signature-icon" do
+              = icon('list')
+          div class="table-column table-column-5 table-column-icon set-delete-trip" data-id="#{trip.id}"
+            = link_to signature_trip_path(trip), method: :delete, data: { confirm: 'Are you sure?' }, class: "signature-icon delete-trip-#{trip.id}", title: "Delete Trip" do
+              i class="fa fa-times"
+      = paginate @trips, exclude: [:first, :last], :params => { :success => nil, :import => nil, :error => nil, :id => nil }, :notice => nil
+
+br
+
+#new-trip-popup
+  = render 'signature/trips/new'
+
+#edit-trip-popup
+  = render 'signature/trips/edit'

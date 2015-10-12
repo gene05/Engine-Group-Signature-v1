@@ -1,0 +1,17 @@
+.signature-container
+  .document-title=@document_signed.document_title
+  .signature-content.client-document-content#show-document-signed
+    .document-content
+      .document-text-content
+        =@document_signed.document_content.html_safe
+        br
+        br
+      form.show-signature
+        .signature.hidden= @document_signed.signature
+        .sigPad
+          .document-section-sign
+            div class="sig sigWrapper"
+              div class="typed"
+              canvas class="pad" width="198" height="55"
+              input type="hidden" name="output" class="output"
+

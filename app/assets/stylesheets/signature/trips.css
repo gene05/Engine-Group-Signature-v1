@@ -1,0 +1,395 @@
+#body-group-signature
+#document-container.setting-trips-container
+.document-table
+.table-header
+.table-column-4 {
+  width: 4%;
+}
+
+#body-group-signature
+#document-container.setting-trips-container
+.document-table
+.table-body
+.table-column-4 {
+  border-right: 1px solid #ddd;;
+}
+
+#body-group-signature
+#document-container.setting-trips-container
+.document-table
+.table-body
+.table-column-2,
+#body-group-signature
+#document-container.setting-trips-container
+.document-table
+.table-header
+.table-column-2 {
+  width: 73%;
+}
+
+#body-group-signature
+#new-trip-popup,
+#body-group-signature
+#edit-trip-popup,
+#body-group-signature
+#new-passenger-popup,
+#body-group-signature
+#edit-passenger-popup {
+  display: none;
+}
+
+#body-group-signature
+#document-container.setting-container
+.document-title
+.section-right
+.btn-list-add,
+#body-group-signature
+.new-trip-container
+.form-new-trip
+.btn-list-add {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+#body-group-signature
+#document-container.setting-container
+.document-title
+.section-right
+.btn-list-add:hover,
+#body-group-signature
+.new-trip-container
+.form-new-trip
+.btn-list-add:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+#body-group-signature
+.new-trip-container {
+  background: #F5F7FA;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+#body-group-signature
+.new-trip-container
+.form-new-trip{
+  padding: 30px 70px 80px;
+  display: inline-block;
+  width: 100%;
+}
+
+#body-group-signature
+.new-trip-container
+.form-new-trip
+.actions
+#btn-add-trip,
+#body-group-signature
+.new-trip-container
+#btn-add-passenger {
+  color: #fff;
+  background-color: #78B05C;
+  border-color: #78B05C;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 9em;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  float: left;
+  margin-right: 1em;
+}
+
+#body-group-signature
+.new-trip-container
+.form-new-trip
+.actions
+#btn-add-trip:hover,
+#body-group-signature
+.new-trip-container
+#btn-add-passenger:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+#body-group-signature
+.new-trip-container
+.form-new-trip
+.actions
+#btn-cancel {
+  float: left;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 9em;
+}
+
+#body-group-signature
+.new-trip-container
+.field-new-trip,
+#body-group-signature
+.new-trip-container
+.field-new-passenger{
+  padding: 10px 0;
+  display: table;
+  width: 100%;
+}
+
+#body-group-signature
+.new-trip-container
+.field-new-trip,
+#body-group-signature
+.new-trip-container
+.field-new-passenger {
+  padding: 10px 0;
+  display: table;
+  width: 100%;
+}
+
+#body-group-signature
+.new-trip-container
+.label-trip{
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+#body-group-signature
+.new-trip-container
+.label-trip-title{
+  width: 50px;
+}
+
+#body-group-signature
+.new-trip-container
+.input-trip,
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.input-passenger {
+  border: 1px solid #D0D0D0;
+  border-radius: 3px;
+  padding: 4px;
+  width: 55%;
+}
+
+#body-group-signature
+.new-trip-container
+.label-passenger{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 17px;
+  font-weight: normal;
+}
+
+
+#body-group-signature
+.new-trip-container
+.document-table {
+  width: 100%;
+  display: inline-block;
+  padding-left: 0;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table
+.table-row
+.table-column label,
+#body-group-signature
+.new-trip-container
+.document-table
+.table-row
+.table-column input {
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table
+.table-row
+.table-column {
+  border-left: 0;
+  border-right: 0;
+}
+
+
+#body-group-signature
+.new-trip-container
+.label-passenger-trips {
+  width: auto;
+  text-align: left;
+  padding-left: 35px;
+}
+
+#body-group-signature
+.new-trip-container
+.input-new-trips {
+  border: 0;
+  border-radius: 3px;
+  padding: 4px;
+  width: 100%;
+}
+
+#body-group-signature
+.table-column
+label {
+  font-weight: normal;
+}
+
+#body-group-signature
+.new-trip-container
+.table-column {
+  width: 100%;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table {
+  padding-top: 0;
+  padding-right: 0;
+}
+
+
+#body-group-signature
+.new-trip-container {
+  overflow-y: scroll;
+}
+
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers {
+  border: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+}
+
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column {
+  border: 0;
+  padding: 2px 0;
+}
+
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column-1,
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column-2 {
+  width: 35%;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table
+.signature-section-form-passengers
+.table-column-1 input,
+#body-group-signature
+.new-trip-container
+.document-table
+.signature-section-form-passengers
+.table-column-2 input {
+  width: 80%;
+  margin: 0;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table
+.signature-section-form-passengers
+.table-column-1 label,
+#body-group-signature
+.new-trip-container
+.document-table
+.signature-section-form-passengers
+.table-column-2 label {
+  width: 15%;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column-3,
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column-4 {
+  width: 15%;
+  padding: 8.5px 0;
+}
+
+#body-group-signature
+.new-trip-container
+.table-row-with-button
+.table-column {
+  border-bottom: 0;
+}
+
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column-3
+#btn-add-passenger {
+  margin: 0;
+}
+
+#body-group-signature
+.new-trip-container
+.table-column
+.btn-list-add,
+#body-group-signature
+.new-trip-container
+.signature-section-form-passengers
+.table-column-3
+#btn-add-passenger,
+#body-group-signature
+.new-trip-container
+.table-column
+.passenger-b-close {
+  float: right;
+  margin-right: 16px;
+  margin-left: 0px;
+}
+
+#body-group-signature
+.new-trip-container
+.table-column
+.passenger-b-close {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  width: 9em;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table
+.row-signature-list-passengers {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 235px;
+}
+

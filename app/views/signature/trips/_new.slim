@@ -1,0 +1,39 @@
+.signature-header.signature-header-popup
+  .popup-close.b-close data-action="new"
+    = image_tag("signature/close.png")
+  .section-left
+    .text Add Trip
+.signature-container.new-trip-container#trip-container
+  .signature-message
+  = form_tag '', :class => "form form-new-trip"  do |f|
+    .field.field-new-trip
+      = label :trip, 'Name', class: "label-trip label-trip-title"
+      = text_field :trip, :name, class: "input-trip input-trip-title input-new-title", :required => true, value: @trip_name
+    br
+    .document-table
+      a href="#" title="Add Passengers by CSV" class="submit btn btn-default btn-list-add btn-passenger-document" id="btn-list-add-trip" data-action="new" + Add Passengers by CSV
+      a href="#" title="Add Passenger" class="submit btn btn-default btn-list-add btn-passenger" id="btn-list-add-trip" data-action="new" + Add Passenger
+      .table-header
+        .table-row
+          .table-column.table-column-1
+            = label :trip, 'Passengers', class: "label-passenger label-passenger-trips", id: "signature-label-passengers"
+      .table-body
+        .table-row.row-signature-list-passengers
+          -if @passengers
+            - @passengers.each do |passenger|
+             .table-column.table-column-1
+              = check_box_tag("passengers_ids[]", passenger['id'], checked = true, class: "signature-check-hidden")
+              span.signature-passenger-name-email #{passenger['name']} (#{passenger['email']})
+              a.signature-icon.signature-icon-right title="Delete Passenger" href="#" data-id="#{passenger['id']}"
+                = icon('times')
+          - else
+            .table-column.table-column-1.signature-not-content
+              = check_box_tag("passengers_ids[]", nil, class: "signature-check-hidden")
+              p You have not assigned passengers
+
+      =render :partial => 'signature/passengers/new', :locals => {:action => 'new'}
+    .actions
+      a.submit.btn.btn-default#btn-add-trip data-action="new" href="#" title="Save Trip" Save
+      .submit.btn.btn-default.b-close#btn-cancel data-action="new" Cancel
+
+  =render :partial => 'signature/passengers/import', :locals => {:action => 'new'}

@@ -1,0 +1,387 @@
+#body-group-signature
+#signature-popup
+#signature-client-popup {
+  background: #F5F7FA;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+#body-group-signature
+.client-document-content
+.sigPad
+.sigWrapper
+.typed{
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 76px;
+  padding: 17px 0;
+  color: #333 !important;
+}
+
+#body-group-signature
+.client-document-content
+.sigPad
+.sigWrapper
+.typed,
+#body-group-signature
+.client-document-content
+.sigPad
+.sigWrapper canvas,
+#body-group-signature
+.client-document-content
+.document-section-sign p {
+  cursor: pointer;
+}
+
+#body-group-signature
+#signature-popup {
+  display: none;
+}
+
+#body-group-signature
+.ply-layer {
+  border-radius: 10px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-x {
+  top: 16px;
+  color: #434a54;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside {
+  background: #F5F7FA;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad {
+  position: relative;
+  height: 300px;
+  width: 500px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav {
+  display: block;
+  position: relative;
+  margin-right: -40px;
+  height: 42px;
+  border-radius: 8px 8px 0 0;
+  background: none;
+  text-align: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li {
+  float: none;
+  display: inline-block;
+  text-align: center;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li.clearButton {
+  position: absolute;
+  bottom: 0;
+  top: 47px;
+  float: right;
+  right: 0;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li a {
+  color: #FFF;
+  text-decoration: none;
+  background: #FFF;
+  color: #434a54;
+  border: 1px solid #CCC;
+  font-size: 14px;
+  line-height: 2;
+  padding: 2px 12px;
+  width: 6em;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li.typeIt a {
+  border-radius: 0 4px 4px 0;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li.drawIt a {
+  border-radius: 4px 0 0 4px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li.clearButton a,
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad .button-sign {
+  font-size: 14px;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  width: 6em;
+  border-radius: 4px;
+  margin: 0 auto;
+  border: 1px solid;
+  font-weight: normal;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li.clearButton a {
+  color: #78B05C !important;
+  padding: 6px 12px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li.clearButton a:hover {
+  color: #47a447 !important;
+  border-color: #47a447;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad .button-sign {
+  color: #fff;
+  background-color: #78B05C;
+  border-color: #78B05C;
+  padding: 6px 12px;
+  margin-top: 1em;
+  position: absolute;
+  bottom: 0;
+  right: 95px;
+  margin-bottom: 0;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad #btn-cancel{
+  margin-top: 1em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6em;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad .button-sign:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+ul.sigNav li a.current {
+  background: #434a54 !important;
+  color: #FFF !important;
+  border: 1px solid #434a54 !important;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper.current,
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper {
+  border: none;
+  margin-top: 18px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-draw {
+  height: 76px;
+  width: 252px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 88px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-draw.hoverCanvas {
+  border: 1px solid #C97272;
+  border-bottom: 1px solid #ccc;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-draw canvas{
+  cursor: crosshair;  
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-write input#name {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  line-height: 1em;
+}
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-write div {
+  border: 1px solid #333;
+  color: #333;
+  position: relative;
+  width: 31.3%;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 15px;
+  display: inline-block !important;
+  text-align: center;
+  margin-right: 15px;
+  float: left;
+  overflow: hidden;
+  font-size: 24px;
+  line-height: 1;
+  padding: 14px 4px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-write #typed-3,
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-write #typed-6 {
+  margin-right: 0;
+}
+
+#body-group-signature
+#typed-1 {
+  font-size: 29px !important;
+ }
+
+#body-group-signature
+#typed-2 {
+  font-family: 'GreatVibes Regular';
+ }
+
+#body-group-signature
+#typed-3 {
+  font-family: 'LobsterTwo-Italic';
+ }
+
+#body-group-signature
+#typed-4 {
+  font-family: 'ScriptinaPro';
+ }
+
+#body-group-signature
+#typed-5 {
+  font-family: 'Sofia-Regular';
+  font-size: 20px !important;
+ }
+
+#body-group-signature
+#typed-6 {
+  font-family: 'KaushanScript-Regular';
+  font-size: 22px !important;
+ }
+
+#body-group-signature
+#signature-popup
+#signature-client-popup form {
+  padding: 30px 60px 80px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-write
+.typed.hoverSign {
+  border-color: #78B05C;
+}
+
+#body-group-signature
+.ply-layer
+.ply-inside
+.sigPad
+.sig.sigWrapper
+.signature-write
+.typed:hover {
+  border-color: #78B05C;
+}

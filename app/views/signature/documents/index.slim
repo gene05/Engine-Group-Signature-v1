@@ -1,0 +1,49 @@
+.signature-header
+  = render "signature/shares/header_admin"
+
+.signature-container.list-documents-container#document-container
+  .document-title
+    .title Documents List
+    .section-right
+      a href="#" class="submit btn btn-default" id="btn-list-add-document" title="add Document" onclick="javascript: addADocument();" + Add Document
+  .content-display-message
+    - if notice
+      .display-message.message-up#signature-success=notice
+  .document-table
+    .table-header
+      .table-row
+        .table-column.table-column-1 #
+        .table-column.table-column-2
+          | Document
+          = sortable("title")
+        .table-column.table-column-3
+          | Last Updated
+          = sortable("updated_at")
+        .table-column.table-column-4
+          | .
+    .table-body
+      - @documents.each_with_index do |document, index|
+        .table-row
+          .table-column.table-column-1= index+1
+          .table-column.table-column-2= document.title
+          .table-column.table-column-3= document.format_date
+          div class="table-column table-column-4 table-column-icon set-edit-document" data-id="#{document.id}"
+            a href="#" id="edit-document-#{document.id}" onclick = "javascript: editThisDocument(#{document.id});" class = "signature-icon signature-icon-span"
+              span class="glyphicon glyphicon-pencil icon"
+          .table-column.table-column-5.table-column-icon
+            = link_to "/signature/documents/#{document.id}", :class => "signature-icon", :id =>"show-document-#{document.id}"  do
+              = icon('search')
+          .table-column.table-column-6.table-column-icon
+            = link_to download_path(document.id, :format => :pdf), :target => "_blank", :class => "signature-icon signature-icon-span", :id =>"download-document-#{document.id}" do
+              span class="glyphicon glyphicon-download-alt icon"
+
+      = paginate @documents, :exclude => [:first, :last], :params => {success: nil}, :notice => nil
+  br
+
+#new-document-popup
+  = render 'signature/documents/new'
+
+#edit-document-popup
+  = render 'signature/documents/edit'
+
+

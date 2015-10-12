@@ -1,0 +1,39 @@
+.signature-header
+  = render "signature/shares/header_admin"
+
+.signature-container.signature-continer-passengers#trips-container
+  .document-title
+    .title 
+      =link_to "Trips", "/signature", :class => "home"
+      |  > Passengers
+    .section-right
+      div class="submit btn btn-default" id="btn-send-documents" onclick="sendDocumentsToTrip()" Send Documents
+
+  .content-display-message
+    - if notice
+      .display-message.message-up#signature-success=notice
+
+  .document-table
+    .table-header
+      .table-row
+        .table-column.table-column-1
+          | Passengers
+          = sortable("name")
+        .table-column.table-column-2
+          | Documents Signed
+        .table-column.table-column-3
+          | .
+    .table-body
+      - @passengers.each do |passenger|
+        .table-row
+          .table-column.table-column-1= passenger.name
+          div class="table-column table-column-2 checked-#{passenger.signed_all_documents?(@trip)}"= passenger.documents_to_sign(@trip)
+          .table-column.table-column-3.table-column-icon
+            = link_to signature_check_path(@trip_id, passenger.id), :class => "signature-icon" do
+              = icon('list')
+
+
+  br
+
+#send-documents-popup
+  = render 'signature/signatures/send_documents'

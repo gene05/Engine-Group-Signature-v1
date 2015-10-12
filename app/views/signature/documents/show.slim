@@ -1,0 +1,16 @@
+.signature-header
+  = render "signature/shares/header_admin"
+
+.signature-container.container-show-document#document-container
+  .document-title
+    .title =@document.title
+    .section-right
+
+  .document-table
+    .show-content
+      .text
+        = @document.content.html_safe
+
+    =link_to "/signature/documents" do
+      .submit.btn.btn-default#btn-back Back
+

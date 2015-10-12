@@ -1,0 +1,21 @@
+.signature-header.signature-header-popup
+  .popup-close.b-close
+    = image_tag("signature/close.png")
+  .section-left
+    .text Add Document
+.signature-container.new-document-container#document-container
+  .signature-message
+  = form_for :document, :html => {:class => "form form-new-document"} do |f|
+    .field.field-new-document
+      = f.label 'Title', class: "label-document label-document-title"
+      = f.text_field :title, class: "input-document input-document-title input-new-title"
+
+    .field.field-new-document
+      = f.label 'Document', class: "label-document label-document-content"
+      .signature-content-input
+        = f.text_area :content, id: 'summernote', class: "input-document-content input-new-content"
+
+    .actions
+      a.submit.btn.btn-default#btn-add-document data-action="new" href="#" title="Save" Save
+      a.submit.btn.btn-default.b-close#btn-cancel Cancel
+

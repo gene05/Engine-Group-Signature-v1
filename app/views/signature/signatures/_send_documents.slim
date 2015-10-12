@@ -1,0 +1,29 @@
+.signature-header.signature-header-popup
+  .popup-close.b-close
+    = image_tag("signature/close.png")
+  .section-left
+    .text Send Documents
+.signature-container.send-documents-container#trips-container
+  = form_tag("/signature/send_documents/#{@trip_id}", :class => 'form form-send-document')
+    .document-table
+      - if @documents.count>0
+        .table-header
+          .table-row
+            .table-column.table-column-1
+              = check_box_tag(:select_all_documents, "all")
+              = label_tag(:select_all_documents, "Select All")
+        .table-body
+          - @documents.each do |document|
+            .table-row
+              .table-column.table-column-1 id= "check-send-document-#{document.id}"
+                = check_box_tag("documents_ids[]", document.id)
+                = document['title']
+        .actions
+          = submit_tag "Send Documents", :class => "submit btn btn-default", :id => "btn-sending-document", :disabled => true, data: { disable_with: "Sending ..." }
+          .submit.btn.btn-default.b-close#btn-cancel Cancel
+      - else
+        p You do not have documents to send
+        .actions
+          .submit.btn.btn-default.b-close#btn-cancel Cancel
+
+

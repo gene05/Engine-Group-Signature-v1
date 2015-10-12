@@ -1,0 +1,258 @@
+#body-group-signature
+.signature-container.signature-continer-passengers#trips-container
+.document-table {
+  padding-top: 0;
+}
+
+#body-group-signature
+.signature-container.signature-continer-passengers
+.content-display-message {
+  height: 45px;
+}
+
+#body-group-signature
+.signature-container.signature-continer-passengers
+.document-title {
+  padding-top: 34px;
+  padding-bottom: 33px;
+}
+
+#document-container.setting-passenger-container
+.document-table
+.table-header
+.table-column-4,
+#document-container.setting-passenger-container
+.document-table
+.table-body
+.table-column-4 {
+  width: 15%;
+}
+
+#document-container.setting-passenger-container
+.document-table
+.table-header
+.table-column-4 {
+  color: #393939;
+}
+
+#document-container.setting-passenger-container
+.document-table
+.table-body
+.table-column-4 {
+  text-align: left;
+}
+
+#document-container.setting-passenger-container
+.document-table
+.table-header
+.table-column-5,
+#document-container.setting-passenger-container
+.document-table
+.table-body
+.table-column-5 {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  color: #eee;
+  width: 4%;
+}
+
+#document-container.setting-passenger-container
+.document-table
+.table-body
+.table-column-2,
+#document-container.setting-passenger-container
+.document-table
+.table-header
+.table-column-2,
+#document-container.setting-passenger-container
+.document-table
+.table-body
+.table-column-3,
+#document-container.setting-passenger-container
+.document-table
+.table-header
+.table-column-3 {
+  width: 38%;
+}
+
+#body-group-signature
+.new-passenger-container {
+  background: #F5F7FA;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+#body-group-signature
+.new-passenger-container
+.form-new-passenger{
+  padding: 30px 60px 80px;
+  display: inline-block;
+  width: 100%;
+}
+
+#body-group-signature
+.new-passenger-container
+.form-new-passenger
+.actions
+#btn-add-passenger{
+  color: #fff;
+  background-color: #78B05C;
+  border-color: #78B05C;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 9em;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  float: left;
+  margin-left: 4em;
+  margin-right: 1em;
+}
+
+#body-group-signature
+.new-passenger-container
+.form-new-passenger
+.actions
+#btn-add-passenger:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+#body-group-signature
+.new-passenger-container
+.form-new-passenger
+.actions
+#btn-cancel {
+  float: left;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 9em;
+}
+
+#body-group-signature
+.new-passenger-container
+.field-new-passenger {
+  padding: 10px 0;
+  display: table;
+  width: 100%;
+}
+
+#body-group-signature
+.new-passenger-container
+.label-passenger{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 17px;
+  font-weight: normal;
+}
+
+#body-group-signature
+.new-passenger-container
+.label-passenger-title {
+  width: 10%;
+}
+
+#body-group-signature
+.new-passenger-container
+.input-passenger {
+  border: 1px solid #D0D0D0;
+  border-radius: 3px;
+  padding: 4px;
+  width: 100%;
+}
+
+#body-group-signature
+.new-passenger-container
+.document-table {
+  width: 100%;
+  display: inline-block;
+}
+
+#body-group-signature
+.new-passenger-container
+.form-send-passenger {
+  padding: 30px 60px 80px;
+  display: inline-block;
+  max-width: 895px;
+}
+
+#body-group-signature
+.new-passenger-container
+.document-table
+.table-row
+.table-column label,
+#body-group-signature
+.new-passenger-container
+.document-table
+.table-row
+.table-column input {
+  vertical-align: middle;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+#body-group-signature
+.new-passenger-container
+.document-table
+.table-row
+.table-column {
+  border-left: 0;
+  border-right: 0;
+}
+
+
+#body-group-signature
+.new-passenger-container
+.label-passenger-trips {
+  width: auto;
+  text-align: left;
+  padding-left: 35px;
+}
+
+#body-group-signature
+.new-passenger-container
+.input-new-trips {
+  border: 0;
+  border-radius: 3px;
+  padding: 4px;
+  width: 100%;
+}
+
+#body-group-signature
+.table-column
+label {
+  font-weight: normal;
+}
+
+#body-group-signature
+.new-passenger-container
+.table-column {
+  width: 100%;
+}
+
+#body-group-signature
+.new-passenger-container
+.document-table {
+  padding-top: 0;
+  padding-right: 0;
+}
+
+
+#body-group-signature
+.new-passenger-container {
+  overflow-y: scroll;
+}
+

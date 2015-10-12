@@ -1,0 +1,34 @@
+.signature-header.signature-header-popup
+  .popup-close.b-close data-action="edit"
+    = image_tag("signature/close.png")
+  .section-left
+    .text Edit Trip
+.signature-container.new-trip-container.edit-trip-container#trip-container
+  .signature-message
+  = form_for :trip, :html => {:class => "form form-new-trip"}  do |f|
+    .field.field-new-trip
+      = f.label 'Name', class: "label-trip label-trip-title"
+      = f.text_field :name, class: "input-trip input-trip-title", :required => true, value: @trip_name
+      #trip-id.hidden
+    br
+    .document-table
+      a href="#" title="Add Passengers by CSV" class="submit btn btn-default btn-list-add btn-passenger-document" id="btn-list-add-trip" data-action="edit" + Add Passengers by CSV
+      a href="#" title="Add Passenger" class="submit btn btn-default btn-list-add btn-passenger" id="btn-list-add-trip" data-action="edit" + Add Passenger
+      
+      .table-header
+        .table-row
+          .table-column.table-column-1
+            = f.label 'Passengers', class: "label-passenger label-passenger-trips", id: "signature-label-passengers"
+      .table-body
+        .table-row.row-signature-list-passengers
+          .table-column.table-column-1.signature-not-content
+            = check_box_tag("passenger_id_", '', class: "signature-check-hidden")
+            p You have not assigned passengers
+
+        =render :partial => 'signature/passengers/new', :locals => {:action => 'edit'}
+    .actions
+      a.submit.btn.btn-default#btn-add-trip href="#" title="Save Edit Trip" data-action="edit" Save
+      .submit.btn.btn-default.b-close#btn-cancel data-action="edit" Cancel
+
+  =render :partial => 'signature/passengers/import', :locals => {:action => 'edit'}
+

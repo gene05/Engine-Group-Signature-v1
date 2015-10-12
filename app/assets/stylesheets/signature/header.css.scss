@@ -1,0 +1,200 @@
+#body-group-signature {
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.signature-header
+.section-left
+.home {
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+}
+
+#body-group-signature
+.signature-container
+.display-message {
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  opacity: 0.8;
+}
+
+#body-group-signature
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+  float: right;
+}
+
+#body-group-signature
+.pagination
+.page {
+  background-color: white;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  padding-bottom: 0.1em;
+}
+
+#body-group-signature
+.pagination a {
+  color: #565656;
+  margin-left: 0.5ex;
+}
+
+#body-group-signature
+.pagination a:hover {
+  text-decoration: none;
+}
+
+#body-group-signature
+.pagination
+.last,
+#body-group-signature
+.pagination
+.first {
+  display: none;
+}
+
+#body-group-signature
+.pagination
+.current {
+  font-weight: bold;
+  border-bottom: 2px solid #000000;
+}
+
+#body-group-signature
+.signature-container
+.display-message.message-down {
+  position: fixed;
+  bottom: 0;
+  padding: 0.5em;
+}
+
+#body-group-signature
+.signature-container
+.display-message.message-up {
+  padding: 0.5em;
+}
+
+#body-group-signature
+.signature-container
+.display-message#signature-error {
+  background: #C97272;
+}
+
+#body-group-signature
+.signature-container
+.display-message#signature-success {
+  background: #A4C993;
+}
+
+.signature-header 
+.section-right 
+.option-documents,
+.signature-header
+.section-left {
+  padding: 20px 0 20px;
+}
+
+.signature-header-popup
+.popup-close {
+  padding: 22px 30px;
+}
+
+.signature-header-popup
+.section-left {
+  padding: 22.4px 0 22.5px;
+}
+
+#body-group-signature
+.signature-header {
+  background: #434a54;
+  color: #FFF;
+  padding: 0 45px 0 35px;
+}
+
+.signature-header .section-left,
+.signature-header .section-right {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.signature-header 
+.section-right 
+.option-documents {
+  position: relative;
+  width: auto;
+  display: inline-block;
+  float: right;
+  border-radius: 2px;
+}
+
+.signature-header 
+.section-right 
+.option-documents img {
+  width: 24px;
+  cursor: pointer;
+}
+
+.signature-header 
+.section-right 
+.option-documents ul {
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  width: auto;
+  z-index: 2;
+  box-shadow: 0px 2px 2px #777;
+  color: #555555;
+  list-style-type: none;
+  padding: 8px;
+  left: -40px;
+  margin-top: 9px;
+  display: none;
+}
+
+.signature-header 
+.section-right 
+.option-documents>ul li:nth-last-child(n+2) {
+border-bottom: 1px solid #CCC;
+position: relative;
+}
+
+.signature-header 
+.section-right 
+.option-documents ul li a {
+  color: #555555;
+  padding: 2px 8px;
+  display: block;
+  cursor: pointer;
+}
+
+.signature-header 
+.section-right 
+.option-documents ul li a:hover {
+  text-decoration: none;
+}
+
+.signature-header 
+.section-right 
+.option-documents>ul li:first-child:after {
+  top: -19px;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255,255,255,0);
+  border-bottom-color: #FFF;
+  border-width: 6px;
+  margin-left: -6px;
+}

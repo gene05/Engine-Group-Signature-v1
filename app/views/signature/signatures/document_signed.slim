@@ -1,0 +1,20 @@
+.signature-header
+  = render "signature/shares/header_admin"
+
+.signature-container
+  .document-title=@document_signed.document_title
+  .signature-content.client-document-content#show-document-signed
+    .document-content
+      .document-text-content
+        =@document_signed.format_content(@passenger)
+        br
+        br
+      form.show-signature
+        .sigPad
+          .document-section-sign
+            div class="sig sigWrapper"
+              div class="typed" id="typed-#{@document_signed.typed_id}"=@document_signed.signature_typed
+              canvas class="pad" width="250" height="74"
+              input type="hidden" name="output" class="output" value="#{@document_signed.signature_draw}"
+    =link_to signature_check_path(@document_signed.trip_id, @document_signed.passenger_id) do
+      .submit.btn.btn-default#btn-back Back

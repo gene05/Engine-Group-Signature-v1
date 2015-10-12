@@ -1,0 +1,249 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+#body-group-signature
+.list-documents-container
+.document-table
+.table-body
+.table-column-4,
+#body-group-signature
+.list-documents-container
+.document-table
+.table-body
+.table-column-5 {
+  border-right: none;
+}
+
+#body-group-signature
+.list-documents-container
+.document-table
+.table-body
+.table-column-5,
+#body-group-signature
+.list-documents-container
+.document-table
+.table-body
+.table-column-6 {
+  border-left: none;
+}
+
+#body-group-signature
+.signature-container
+.document-title {
+  background: #E6EAED;
+  padding: 38px 45px 38px 35px;
+  font-size: 18px;
+  color: #656D78;
+}
+
+#body-group-signature
+.signature-container.list-documents-container
+.document-title {
+  padding-top: 34px;
+  padding-bottom: 33px;
+}
+
+#body-group-signature
+.signature-container.list-documents-container
+.document-table {
+  padding-top: 0;
+}
+
+#body-group-signature
+.signature-container.list-documents-container
+.content-display-message{
+  height: 50px;
+}
+
+#body-group-signature
+.btn-right{
+  float: right;
+  margin: 2em 0 4em;
+}
+
+#body-group-signature
+#btn-blue{
+  font-weight: bolder;
+  color: #FFF;
+  background: #337ab7;
+  border: none;
+  padding: 0.5em 2em;
+}
+
+#body-group-signature
+.btn-last{
+  margin-left: 0.5em;
+  margin-right: 4em;
+}
+
+.signature-container
+.document-table {
+  padding: 44px 45px 44px 35px;
+}
+
+.signature-container
+.document-table
+.table-row {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: -6px;
+}
+
+.signature-container
+.document-table
+.table-column img {
+  cursor: pointer;
+  width: 13px;
+}
+
+#document-container
+.document-table
+.table-header
+.table-column-1,
+#document-container
+.document-table
+.table-body
+.table-column-1 {
+  width: 5%;
+  text-align: left;
+}
+
+#document-container
+.document-table
+.table-body
+.table-column-4,
+#document-container
+.document-table
+.table-body
+.table-column-5,
+#document-container
+.document-table
+.table-body
+.table-column-6 {
+  width: 4%;
+  text-align: center;
+}
+
+#document-container
+.document-table
+.table-body
+.table-column-2,
+#document-container
+.document-table
+.table-header
+.table-column-2 {
+  width: 65%;
+}
+
+#document-container
+.document-table
+.table-body
+.table-column-3,
+#document-container
+.document-table
+.table-header
+.table-column-3 {
+  width: 18%;
+}
+
+#document-container
+.document-table
+.table-header
+.table-column-4 {
+  width: 12%;
+  color: #eee;
+}
+
+.signature-container
+.document-table
+.table-header
+.table-column {
+  color: #393939;
+  background: #eee;
+  font-weight: bold;
+}
+
+.signature-container
+.document-table
+.table-header
+.table-column
+.img-icon-center {
+  float: right;
+  padding: 4px 0 3px;
+}
+
+#document-container
+.document-table
+.table-header
+.table-column-4 {
+  border-radius: 0 3px 0 0;
+}
+
+#document-container
+.document-table
+.table-header
+.table-column-1 {
+  border-radius: 3px 0 0 0;
+}
+
+#document-container
+.document-table
+.table-body
+.table-column-4 {
+  border-right: none;
+}
+
+#document-container
+.document-table
+.table-body
+.table-column-5 {
+  border-right: none;
+  border-left: none;
+}
+
+#document-container
+.document-table
+.table-body
+.table-column-6 {
+  border-left: none;
+}
+
+.signature-container
+.document-title
+.title,
+.signature-container
+.document-title
+.section-right {
+  display: inline-block;
+}
+
+.signature-container
+.document-title
+.title,
+.signature-container
+.document-title
+.section-right {
+  display: table-cell;
+  width: 100%;
+}
+
+#document-container
+.document-title
+.section-right
+#btn-list-add-document {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+#document-container
+.document-title
+.section-right
+#btn-list-add-document:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+

@@ -1,0 +1,19 @@
+.document-table.section-form-import-passengers.hidden
+  .table-body
+    .table-row
+      =form_tag import_signature_passengers_path, multipart: true, remote: true, id: "import-form-passengers" do
+        .signature-error-row.hidden #{@number_row_with_error}
+        = hidden_field_tag :id
+        = hidden_field_tag :page
+        = hidden_field_tag :import_trip, @trip_name
+        -if @passengers
+          - @passengers.each do |passenger|
+            = hidden_field_tag "previous_passengers_ids[]", passenger['id'], class: "passenger-#{passenger['id']}"
+        .table-column.table-column-1
+          .field.field-new-document-passenger.field-import-1
+            =file_field_tag :file, required: true, :accept => '.csv'
+          .field.field-new-document-passenger.field-import-2
+            = submit_tag "Import", class: "submit btn btn-default", title: "Import Passengers"
+          .field.field-new-document-passenger.field-import-3
+            div class="submit btn btn-default close-passenger-document" data-action="#{action}" id="btn-cancel" Cancel
+

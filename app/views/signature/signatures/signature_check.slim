@@ -1,0 +1,42 @@
+.signature-header
+  = render "signature/shares/header_admin"
+
+.signature-container.signature-check-container#trips-container
+  .document-title
+    .title
+      =link_to "Trips", "/signature", :class => "home"
+      |  
+      =link_to "> Passengers", passengers_path(@trip.id), :class => "home"
+      |  > #{@passenger.name}
+    .section-right
+
+  .document-table
+    .table-header
+      .table-row
+        .table-column.table-column-1 #
+        .table-column.table-column-2
+          | Document
+          = sortable("title")
+        .table-column.table-column-3
+          | Signed
+          = sortable("status")
+        .table-column.table-column-4
+          | Date Signed
+        .table-column.table-column-5
+          | .
+    .table-body
+      - @check_documents.each_with_index do |check_document, index|
+        .table-row
+          .table-column.table-column-1= index+1
+          .table-column.table-column-2= check_document.document_title
+          div class="table-column table-column-3 checked-#{check_document.signed?}"= check_document.signed? ? 'Yes' : 'No'
+          .table-column.table-column-4= check_document.signed? ? check_document.format_date : '-'
+          .table-column.table-column-5.table-column-icon
+            - if check_document.signed?
+              a class="signature-icon" onclick="redirect('signature/document_signed/#{check_document.id}');"
+                = icon('search')
+            - else
+              p -      
+
+br
+

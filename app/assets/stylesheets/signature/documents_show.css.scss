@@ -1,0 +1,37 @@
+#body-group-signature
+.container-show-document .text,
+.container-show-document .title{
+  font-size: 16px;
+}
+
+#body-group-signature
+.container-show-document .title{
+  font-weight: bold;
+}
+
+#body-group-signature
+.container-show-document .show-title .text{
+  text-transform: capitalize;
+}
+
+#body-group-signature
+.show-title,
+.show-description,
+.show-content{
+  padding: 10px 30px;
+}
+
+#body-group-signature
+.show-title p,
+.show-description p{
+  display: inline-block;
+}
+
+#body-group-signature
+.container-show-document
+#btn-back {
+  float: right;
+  width: 7em;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}

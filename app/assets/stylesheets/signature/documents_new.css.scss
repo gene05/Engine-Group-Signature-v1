@@ -1,0 +1,220 @@
+.signature-header
+.popup-close img {
+  width: 11px;
+}
+
+#body-group-signature
+.new-document-container {
+  background: #F5F7FA;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+#body-group-signature
+.new-document-container
+.signature-content-input {
+  display: inline-block;
+  float: left;
+}
+
+#body-group-signature
+.new-document-container
+.note-toolbar
+#insertName {
+  position: relative;
+}
+
+#body-group-signature
+.new-document-container
+.note-toolbar-add:hover .signature-tooltip-content-message,
+#body-group-signature
+.new-document-container
+.note-toolbar-add:hover #arrow-signature-tooltip-message   {
+  display: inline-block !important;
+}
+
+
+#body-group-signature
+.new-document-container
+.note-toolbar
+.signature-tooltip-content-message {
+  position: absolute;
+  display: none;
+  word-wrap: break-word;
+  color: #FFF;
+  background-color: #78B05C;
+  padding: 6px;
+  z-index: 2;
+  width: 94px;
+  font-size: 12px;
+  left: -4px;
+  top: 35px;
+  border-radius: 4px;
+}
+
+#body-group-signature
+.new-document-container
+.note-toolbar
+.signature-tooltip-content-message:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid #78B05C;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.signature-header
+.section-left
+.text {
+  width: auto;
+  display: inline-block;
+}
+
+#body-group-signature
+.new-document-container
+.form-new-document{
+  padding: 50px 70px 80px;
+  display: inline-block;
+  width: 100%;
+}
+
+#body-group-signature
+.new-document-container
+.form-new-document
+.actions
+#btn-add-document{
+  color: #fff;
+  background-color: #78B05C;
+  border-color: #78B05C;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 9em;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  float: left;
+  margin-left: 6em;
+  margin-right: 1em;
+}
+
+#body-group-signature
+.new-document-container
+.form-new-document
+.actions
+#btn-add-document:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+#body-group-signature
+.new-document-container
+.form-new-document
+.actions
+#btn-cancel {
+  float: left;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 9em;
+}
+
+#body-group-signature
+#new-document-popup {
+  display: none;
+}
+
+.signature-header
+.popup-close {
+  background: #656C76;
+  width: auto;
+  display: inline-block;
+  float: left;
+  position: relative;
+  top: 0px;
+  left: -35px;
+  padding: 20px 30px;
+  margin-bottom: -20px;
+  cursor: pointer;
+}
+
+#body-group-signature
+.new-document-container
+.field-new-document{
+  padding: 10px 0;
+  display: table;
+  width: 100%;
+}
+
+#body-group-signature
+.new-document-container
+.field-new-document{
+  padding: 10px 0;
+  display: table;
+  width: 100%;
+}
+
+#body-group-signature
+.new-document-container
+.label-document{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 17px;
+  font-weight: normal;
+  width: 85px;
+}
+
+#body-group-signature
+.new-document-container
+.label-document-description{
+  width: 8%;
+}
+
+#body-group-signature
+.new-document-container
+.input-document {
+  border: 1px solid #D0D0D0;
+  border-radius: 3px;
+  padding: 4px;
+  width: 55%;
+}
+
+#body-group-signature
+.new-document-container
+.label-document-content {
+  vertical-align: top;
+  text-align: left;
+}
+
+#body-group-signature
+.new-document-container
+.field-new-document
+.note-editor {
+  border: 1px solid #D0D0D0 !important;
+}
+
+#body-group-signature
+.new-document-container
+.field-new-document
+.note-editor
+.btn-toolbar {
+  border: 1px solid #9FA1A3 !important;
+  margin: -1px !important;
+}
+
+
+
+

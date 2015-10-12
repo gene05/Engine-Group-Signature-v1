@@ -1,0 +1,527 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+#body-group-signature
+.table-column
+.signature-icon i {
+  color: #94999f;
+  background-color: #f3f7fa;
+  width: 30px;
+  height: 29px;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-header
+.table-column {
+  position: relative;
+}
+
+#body-group-signature
+.signature-trips#trips-container
+.content-display-message{
+  height: 55px;
+}
+
+#body-group-signature
+.signature-trips#trips-container
+.document-table {
+  padding-top: 0;
+}
+
+#body-group-signature
+.new-trip-container
+.document-table
+.table-column
+.btn-passenger-document {
+  margin-right: 0 !important;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers {
+  padding: 30px 60px 80px !important;
+  position: relative;
+  top: -291px;
+}
+
+#body-group-signature
+.signature-icon-right {
+  float: right;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body
+.field-new-document-passenger {
+  display: inline-block;
+  float: left;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body
+.field-import-1 {
+  width: 66%;
+  padding: 6px 0;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body
+.field-import-2,
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body
+.field-import-3 {
+  width: 17%;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body
+.field-import-2 input{
+  color: #fff;
+  background-color: #78B05C;
+  border-color: #78B05C;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 9em;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+#body-group-signature
+.signature-message {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  overflow-y: hidden;
+  padding: 0.5em;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+#body-group-signature
+.signature-message.message-color-red {
+  background: #C97272;
+}
+
+#body-group-signature
+.form-new-trip {
+  margin-top: 20px;
+}
+
+#body-group-signature
+.signature-container.new-trip-container {
+  position: relative;
+}
+
+#body-group-signature
+.signature-message.message-color-green {
+  background: #A4C993;
+}
+
+
+#body-group-signature
+.new-trip-container
+.btn-more-down {
+  margin-top: 60px;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body {
+  padding: 0 0 0 35px;
+}
+
+#body-group-signature
+.new-trip-container
+.section-form-import-passengers
+.table-body
+.row-signature-list-passengers {
+  overflow-y: hidden !important;
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-header
+.table-column i {
+  font-size: 12px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -7px;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  line-height: 14px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  background-image: none;
+  color: #999999;
+  font-size: 12px;
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-body
+.table-column-icon p {
+  margin: 4.5px 0;
+}
+
+#body-group-signature
+.signature-container#trips-container
+.document-title
+.section-right
+.btn-list-add {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+#body-group-signature
+.signature-container#trips-container
+.document-title
+.section-right
+.btn-list-add:hover {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+#body-group-signature
+.new-trip-container
+.table-column
+.close-passenger-document {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  width: 9em;
+}
+
+#body-group-signature
+.new-trip-container
+.form-new-trip
+.btn-list-add {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+#body-group-signature
+.document-table
+.table-body
+.row-signature-list-passengers {
+  background: #FFF;
+}
+
+#body-group-signature
+.document-table
+.table-body
+.row-signature-list-passengers
+span.signature-passenger-name-email {
+  display: inline-block;
+  float: left;
+  padding: 4px 0;
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-body
+.table-column-icon
+.signature-icon-span,
+#body-group-signature
+.document-table
+.table-body
+.row-signature-list-passengers
+.signature-icon-span {
+  padding: 8px;
+  background-color: #F5F7FA;
+  border-radius: 3px;
+  color: #AAB2BD;
+  display: block;
+  width: 30px;
+  height: 29px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#body-group-signature
+.document-table
+.table-body
+.row-signature-list-passengers
+.signature-icon-span {
+  float: right;
+  margin-right: 15px;
+  font-size: 12px;
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-body
+.table-column-icon
+.signature-icon-span span {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 12px;
+}
+
+
+#body-group-signature
+.signature-container
+.document-table
+.table-header
+.table-column i.desc:before {
+  content: "\e114";
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-header
+.table-column i.asc:before {
+  content: "\e113";
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-column {
+  display: inline-block;
+  float: left;
+  border: 1px solid #ddd;
+  padding: 12.5px 16px;
+}
+
+#body-group-signature
+.signature-container
+.document-table
+.table-column-icon {
+  padding: 8px 11px;
+}
+
+
+#body-group-signature
+#send-documents-popup {
+  display: none;
+  box-shadow: -5px 0px 0px rgba(0,0,0,0.2);
+}
+
+#body-group-signature
+.home {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-column-1,
+#body-group-signature
+#trips-container
+.document-table
+.table-header
+.table-column-1 {
+  width: 55%;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-column-2,
+#body-group-signature
+#trips-container
+.document-table
+.table-header
+.table-column-2 {
+  width: 30%;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-column-3,
+#body-group-signature
+#trips-container
+.document-table
+.table-header
+.table-column-3 {
+  text-align: center;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-column-3,
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-column-4 {
+  width: 5%;
+}
+
+#body-group-signature
+.signature-container.signature-trips#trips-container
+.document-table
+.table-body
+.table-column-4 {
+  border-left: none;
+  border-right: none;
+}
+
+#body-group-signature
+.signature-container.signature-trips#trips-container
+.document-table
+.table-body
+.table-column-5 {
+  border-left: none;
+  width: 5%;
+}
+
+#body-group-signature
+.signature-container.signature-trips#trips-container
+.document-table
+.table-body
+.table-column-3 {
+  border-right: none;
+}
+
+#body-group-signature
+.signature-container#trips-container
+.document-table
+.table-header
+.table-column-3 {
+  width: 15%;
+  color: #eee;
+}
+
+#body-group-signature
+.signature-continer-passengers#trips-container
+.document-table
+.table-header
+.table-column-3 {
+  width: 5%;
+  color: #eee;
+}
+
+#body-group-signature
+.signature-not-content p {
+  padding: 0;
+  color: #9EA4AA;
+  display: inline-block;
+  margin: 0;
+}
+
+#body-group-signature
+.document-table
+#signature-label-passengers {
+  padding-left: 14px;
+}
+
+#body-group-signature
+.document-table
+.row-signature-list-passengers input[type=checkbox] {
+  margin: 0 !important;
+  opacity: 0;
+  float: left;
+}
+
+#body-group-signature
+.signature-continer-passengers#trips-container
+.document-table
+.table-body
+.table-column-1,
+#body-group-signature
+.signature-continer-passengers#trips-container
+.document-table
+.table-header
+.table-column-1 {
+  width: 65%;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.table-column-3 img {
+  width: auto;
+}
+
+#body-group-signature
+#trips-container
+.document-table
+.table-body
+.sign-status-red {
+  color: red;
+}
+
+#body-group-signature
+#trips-container
+.document-title
+.section-right
+#btn-send-documents{
+  color: #fff;
+  background-color: #78B05C;
+  border-color: #78B05C;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 10em;
+  border-radius: 4px;
+}
+
+#body-group-signature
+#trips-container
+.document-title
+.section-right
+#btn-send-documents:hover {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+
+

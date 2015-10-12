@@ -1,0 +1,41 @@
+.signature-header
+  .section-left GROUP SIGNATURE
+  .section-right
+    .show-document-message You have #{@count_unsigned_documents} documents left to sign
+.signature-container
+  .document-title=@unsigned_documents.first.title
+  .signature-content.client-document-content
+    .document-content
+      .document-text-content
+        =@unsigned_documents.first.format_content(@passenger)
+        br
+        br
+      = form_tag("/d/#{@reference}", :class => 'document-validation')
+        = hidden_field_tag('document_id', @unsigned_documents.first.id)
+        = check_box_tag(:accepted, 'yes')
+        = label_tag(:accepted, "I have read and accept all terms and conditions")
+        .sigPad
+          .field-signature
+            = label_tag(:name, "Name")
+            = text_field_tag :name, @name, class: "name", required: true
+          .field-signature
+            = label_tag(:date, "Date")
+            = date_field_tag :date, @date, required: true
+          .document-section-sign
+            p Click to Sign
+            div class="sig sigWrapper"
+              div class="typed"
+              canvas class="pad" width="250" height="74"
+              = hidden_field_tag('output', @output, class: 'output')
+              = hidden_field_tag('typed', @typed)
+              = hidden_field_tag('typed_id', @typed_id)
+
+        = submit_tag "Confirm and Send", :class => "document-confirm-button"
+
+  - if @message
+    .display-message#signature-error.message-down=@message
+
+
+
+
+
