@@ -31,6 +31,12 @@ function closePopup(action) {
   }
 }
 
+function resetInputsTrip(){
+  $('#body-group-signature .form-new-trip .input-new-title').val('');
+  $('#body-group-signature #new-trip-popup input[type=checkbox]').prop('checked', false);
+  cancelAddPassenger('new');
+}
+
 function getUrlVariable(variable) {
   var query = window.location.search.substring(1);
   var vars = query.split("&");

@@ -1,7 +1,7 @@
 function loadFunctionsTrips() {
   if($('#body-group-signature .signature-trips#trips-container .set-delete-trip').length){
     $.rails.allowAction = function(link){
-      if (link.data("confirm") == undefined){
+      if (link.data("confirm") === undefined){
         return true;
       }
       dialogDelete('', link, 'trip');
@@ -41,12 +41,12 @@ function loadFunctionsTrips() {
   }
 
   $("#body-group-signature #new-trip-popup input[name='trip[name]']").change(function() {
-    trip_name = $("#body-group-signature #new-trip-popup input[name='trip[name]']").val();
+    var trip_name = $("#body-group-signature #new-trip-popup input[name='trip[name]']").val();
     $("#body-group-signature #new-trip-popup #import-form-passengers input#import_trip").val(trip_name);
   });
 
   $("#body-group-signature #edit-trip-popup input[name='trip[name]']").change(function() {
-    trip_name = $("#body-group-signature #edit-trip-popup input[name='trip[name]']").val();
+    var trip_name = $("#body-group-signature #edit-trip-popup input[name='trip[name]']").val();
     $("#body-group-signature #edit-trip-popup #import-form-passengers input#import_trip").val(trip_name);
   });
 }
@@ -96,7 +96,7 @@ function data(obj, type){
 }
 
 function selectIcon(obj){
-  title = $(obj).attr("title");
+  var title = $(obj).attr("title");
   if(title==="Delete Passenger"){
     dialogDelete(obj, '', 'passenger');
   }
@@ -121,7 +121,7 @@ function dialogDelete(obj, link, subject){
         removingPassenger(obj);
       }
     }
-  })
+  });
 }
 
 function removingPassenger(obj){
@@ -129,7 +129,7 @@ function removingPassenger(obj){
   var trip_id = $('div#trip-id', $(obj).parents().eq(4)).text();
   var selector = trip_id !=="" ? '#edit-trip-popup' : '#new-trip-popup';
   var list_passengers = $('#body-group-signature '+selector+' .row-signature-list-passengers');
-  data_trip = {'trip_id': trip_id };
+  var data_trip = {'trip_id': trip_id };
   $.ajax({
     method: "DELETE",
     url: "/signature/passengers/"+passenger_id,
@@ -185,7 +185,7 @@ function appendMessage(color, selector, message){
   $('#body-group-signature '+selector+' .signature-message').fadeIn();
   $('#body-group-signature '+selector+' .signature-message').show();
   $('#body-group-signature '+selector+' .signature-message').html(message);
-  $('#body-group-signature '+selector+' .signature-message').delay(3200).queue(function(next){
+  $('#body-group-signature '+selector+' .signature-message').delay(3200).queue(function(){
       $('#body-group-signature '+selector+' .signature-message').fadeOut(400).html('').removeClass('message-color-'+color);
   });
 }
@@ -198,7 +198,7 @@ function addATrip(action){
     $('#body-group-signature #new-trip-popup input[type=checkbox]').prop('checked', false);
   }
   var previous_passengers = $('#body-group-signature #new-trip-popup #previous_passengers_ids_');
-  var row_no_passengers = $('#body-group-signature #new-trip-popup .row-signature-list-passengers .signature-not-content')
+  var row_no_passengers = $('#body-group-signature #new-trip-popup .row-signature-list-passengers .signature-not-content');
   if(!previous_passengers.length && !row_no_passengers.length){
     notSignedPassengers('new');
   }
@@ -240,12 +240,6 @@ function cancelAddPassenger(action){
 
 }
 
-function resetInputsTrip(){
-  $('#body-group-signature .form-new-trip .input-new-title').val('');
-  $('#body-group-signature #new-trip-popup input[type=checkbox]').prop('checked', false);
-  cancelAddPassenger('new');
-}
-
 function addTrip(){
   cancelAddPassenger('new');
   var selector = '#new-trip-popup';
@@ -257,7 +251,7 @@ function addTrip(){
     $.each($("#body-group-signature #new-trip-popup .new-trip-container input[name='passengers_ids[]']:checked"), function(){            
       passengers.push($(this).val());
     });
-    trip_data = {'trip[name]': trip_name, 'passengers_ids': passengers };
+    var trip_data = {'trip[name]': trip_name, 'passengers_ids': passengers };
     $.post("/signature/trips", trip_data, function( data ) {
       if(data.status === true){
         $('#body-group-signature #new-trip-popup .b-close').click();
@@ -325,7 +319,7 @@ function editTrip(){
       method: "PUT",
       url: "/signature/trips/"+id,
       data: trip_data,
-      success: function(result) {
+      success: function() {
         $('#body-group-signature #edit-trip-popup .b-close').click();
         window.location.href="/signature/trips?success=updated";
       }
@@ -334,7 +328,7 @@ function editTrip(){
 }
 
 function addAPassengerInTrip(action){
-  selector = '#'+action+'-trip-popup .signature-section-form-passengers';
+  var selector = '#'+action+'-trip-popup .signature-section-form-passengers';
   if(fieldEmpty(selector, 'name') || fieldEmpty(selector, 'email') || notEmailFormat(selector+' #email')){
     validatingPassenger(selector);
   }else{
@@ -342,9 +336,9 @@ function addAPassengerInTrip(action){
     var passenger_email = $('#body-group-signature #'+action+'-trip-popup .signature-section-form-passengers #email').val();
     var trip_id = $("#body-group-signature #"+action+"-trip-popup form .field-new-trip div#trip-id").text();
 
-    passenger_data = {'name': passenger_name, 'email': passenger_email, 'trip_id': trip_id };
+    var passenger_data = {'name': passenger_name, 'email': passenger_email, 'trip_id': trip_id };
     $.post("/signature/passengers/", passenger_data, function( data ) {
-      if(data.status == true){
+      if(data.status === true){
         cancelAddPassenger(action);
         var new_passenger = '<div class="table-column table-column-1"><input type="checkbox" checked name="passengers_ids[]" id="passengers_ids_" class="signature-check-hidden" value="'+data.passenger.id+'"><span class="signature-passenger-name-email">'+data.passenger.name+' ('+data.passenger.email+')</span><a class="signature-icon signature-icon-right" data-id="'+data.passenger.id+'" href="#" title="Delete Passenger"><i class="fa fa-times"></i></a></div>';
         $('#body-group-signature #'+action+'-trip-popup .table-body .row-signature-list-passengers').prepend(new_passenger);
