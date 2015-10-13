@@ -6,12 +6,12 @@ function loadFunctionsTrips() {
       }
       dialogDelete('', link, 'trip');
       return false;
-    }
+    };
 
     $.rails.confirmed = function(link){
       link.data("confirm", null);
       link.trigger("click.rails");
-    }
+    };
   }
 
   if($('#body-group-signature .new-trip-container#trip-container').length){
@@ -23,7 +23,7 @@ function loadFunctionsTrips() {
   }
 
   $("#body-group-signature form").on("keypress", function (e) {
-      if (e.keyCode == 13) {
+      if (e.keyCode === 13) {
           return false;
       }
   });
@@ -49,7 +49,7 @@ function loadFunctionsTrips() {
     trip_name = $("#body-group-signature #edit-trip-popup input[name='trip[name]']").val();
     $("#body-group-signature #edit-trip-popup #import-form-passengers input#import_trip").val(trip_name);
   });
-};
+}
 
 function clickButtonsForm(){
   $("#body-group-signature .new-trip-container#trip-container .btn-passenger-document").click(function() {
@@ -73,7 +73,7 @@ function clickButtonsForm(){
   });
 
   $("#body-group-signature .new-trip-container#trip-container #btn-add-trip").click(function() {
-    if(data(this, 'action')=="new"){
+    if(data(this, 'action')==="new"){
       addTrip();
     }else{
       editTrip();
@@ -97,7 +97,7 @@ function data(obj, type){
 
 function selectIcon(obj){
   title = $(obj).attr("title");
-  if(title=="Delete Passenger"){
+  if(title==="Delete Passenger"){
     dialogDelete(obj, '', 'passenger');
   }
 }
@@ -115,9 +115,9 @@ function dialogDelete(obj, link, subject){
       }
   }).always(function (ui) {
     if (ui.state) {
-      if(subject=='trip'){
+      if(subject==='trip'){
         $.rails.confirmed(link);
-      }else if(subject=='passenger'){
+      }else if(subject==='passenger'){
         removingPassenger(obj);
       }
     }
@@ -127,9 +127,9 @@ function dialogDelete(obj, link, subject){
 function removingPassenger(obj){
   var passenger_id = $(obj).data('id');
   var trip_id = $('div#trip-id', $(obj).parents().eq(4)).text();
-  var selector = trip_id !="" ? '#edit-trip-popup' : '#new-trip-popup'
+  var selector = trip_id !=="" ? '#edit-trip-popup' : '#new-trip-popup';
   var list_passengers = $('#body-group-signature '+selector+' .row-signature-list-passengers');
-  data_trip = {'trip_id': trip_id }
+  data_trip = {'trip_id': trip_id };
   $.ajax({
     method: "DELETE",
     url: "/signature/passengers/"+passenger_id,
@@ -153,19 +153,19 @@ function setPagePopup(action){
 
 function setPopup(){
   var status = getUrlVariable('import');
-  var color = status=='true' ? 'green' : 'red';
+  var color = status==='true' ? 'green' : 'red';
   var selector = getUrlVariable('id') ? '#edit-trip-popup' : '#new-trip-popup';
   var rows = $('#body-group-signature '+selector+' .signature-error-row').text();
-  var message = status=='true' ? 'Passengers successfully added' : caseErrorMessage(rows);
+  var message = status==='true' ? 'Passengers successfully added' : caseErrorMessage(rows);
   showPopup();
   appendMessage(color, selector, message);
 }
 
 function caseErrorMessage(rows) {
   var error = getUrlVariable('error');
-  if(error=='format'){
+  if(error==='format'){
     return 'Import document is invalid, the format must be .csv';
-  }else if(error=='empty'){
+  }else if(error==='empty'){
     return 'The imported document is empty';
   }else{
     return 'Check the line #'+rows+' of the document, it has an empty field or wrong';
@@ -173,10 +173,11 @@ function caseErrorMessage(rows) {
 }
 
 function showPopup() {
-  if(getUrlVariable('id'))
+  if(getUrlVariable('id')){
     editThisTrip(getUrlVariable('id'), 'import');
-  else
+  }else{
     addATrip('import');
+  }
 }
 
 function appendMessage(color, selector, message){
@@ -191,9 +192,9 @@ function appendMessage(color, selector, message){
 
 function addATrip(action){
   setPagePopup(action);
-  var speed = action == 'import' ? 0 : 350;
-  var transition = action == 'import' ? false : 'slideBack';
-  if(action == 'new'){
+  var speed = action === 'import' ? 0 : 350;
+  var transition = action === 'import' ? false : 'slideBack';
+  if(action === 'new'){
     $('#body-group-signature #new-trip-popup input[type=checkbox]').prop('checked', false);
   }
   var previous_passengers = $('#body-group-signature #new-trip-popup #previous_passengers_ids_');
@@ -217,7 +218,7 @@ function addATrip(action){
 
 function selectPassengers(){
   $('#body-group-signature .new-trip-container input[type=checkbox]').click(function(){
-    if($(this).val() == 'all'){
+    if($(this).val() === 'all'){
       if($(this).is(":checked")){
         selectOrDeselectAllCheck('.new-trip-container', true);
       } else if($(this).is(":not(:checked)")){
@@ -256,9 +257,9 @@ function addTrip(){
     $.each($("#body-group-signature #new-trip-popup .new-trip-container input[name='passengers_ids[]']:checked"), function(){            
       passengers.push($(this).val());
     });
-    trip_data = {'trip[name]': trip_name, 'passengers_ids': passengers }
+    trip_data = {'trip[name]': trip_name, 'passengers_ids': passengers };
     $.post("/signature/trips", trip_data, function( data ) {
-      if(data.status == true){
+      if(data.status === true){
         $('#body-group-signature #new-trip-popup .b-close').click();
         window.location.href="/signature/trips?success=added";
       }
@@ -268,8 +269,8 @@ function addTrip(){
 
 function editThisTrip(id, action){
   setPagePopup(action);
-  var speed = action == 'import' ? 0 : 350;
-  var transition = action == 'import' ? false : 'slideBack';
+  var speed = action === 'import' ? 0 : 350;
+  var transition = action === 'import' ? false : 'slideBack';
   $('#body-group-signature #edit-trip-popup #import-form-passengers #id').val(id);
   $('#body-group-signature #edit-trip-popup #import-form-passengers #previous_passengers_ids_').remove();
   $('#body-group-signature #edit-trip-popup').css("width", ($(window).width()-100)+"px");
@@ -285,7 +286,7 @@ function editThisTrip(id, action){
     transitionClose: 'slideBack',
     onOpen: function(){
       $.get("/signature/trips/"+id+"/edit", function( data ) {
-        if(data.status == true){
+        if(data.status === true){
           $('#body-group-signature #edit-trip-popup input[type=checkbox]').prop('checked', false);
           cancelAddPassenger(action);
           $('#body-group-signature #edit-trip-popup .row-signature-list-passengers .table-column').remove();
@@ -299,7 +300,7 @@ function editThisTrip(id, action){
               assignedPassengers(action);
             });
           }else{
-            notSignedPassengers(action)
+            notSignedPassengers(action);
           }
         }
       });
@@ -318,7 +319,7 @@ function editTrip(){
     $.each($("#body-group-signature #edit-trip-popup .edit-trip-container input[type=checkbox]:checked"), function(){            
       passengers.push($(this).val());
     });
-    trip_data = {'trip[name]': trip_name, 'passengers_ids': passengers}
+    trip_data = {'trip[name]': trip_name, 'passengers_ids': passengers};
 
     $.ajax({
       method: "PUT",
